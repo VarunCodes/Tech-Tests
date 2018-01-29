@@ -1,10 +1,30 @@
 # Bank tech test
-___
 
 The objective of this program is to simulate a bank account via the user's terminal, allowing them to maintain a virtual balance by depositing and withdrawing funds.
 
+# User stories
+```
+As a customer
+To give my money to somebody responsible
+I want to create a bank account
+```
+```
+As a customer
+To add to my balance
+I want to deposit money
+```
+```
+As a customer
+To retrieve my money
+I want to withdraw from my balance
+```
+```
+As a customer
+To ensure the integrity of each transaction
+I want to view accurate timestamps
+```
+
 # Challenge
-___
 
 ### Requirements
 
@@ -34,7 +54,6 @@ date || credit || debit || balance
 ```
 
 # Installation
-___
 
 ```
 $ git clone https://github.com/VarunCodes/Tech-Tests.git   # Clone the repo
