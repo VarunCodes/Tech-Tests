@@ -1,27 +1,23 @@
 require 'account'
 
 describe Account do
-  subject(:account) { Account.new }
+  subject(:account) { Account.new(1000) }
 
   describe 'New account' do
-    it 'starts with a balance of zero' do
-      expect(account.balance).to eq 0
+    it 'starts with a balance of a custom amount' do
+      expect(account.balance).to eq 1000
     end
   end
 
   describe 'Depositing' do
     it 'adds money to my total balance' do
-      expect(account.balance).to eq 0
-      account.deposit(500)
-      expect(account.balance).to eq 500
+      expect { account.deposit(500) }.to change { account.balance }.to eq 1500
     end
   end
 
   describe 'Withdrawing' do
     it 'removes money from my total balance' do
-      account.deposit(1000)
-      account.withdraw(251)
-      expect(account.balance). to eq 749
+      expect { account.withdraw(251) }.to change { account.balance }.to eq 749
     end
   end
 end

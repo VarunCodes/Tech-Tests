@@ -3,8 +3,8 @@
 class Account
   attr_accessor :balance
 
-  def initialize
-    @balance = 0
+  def initialize(balance)
+    @balance = balance
   end
 
   def deposit(amount)
